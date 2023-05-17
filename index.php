@@ -20,6 +20,7 @@ include_once __DIR__ . '/database/db.php'
 <body>
 
   <div class="container">
+    <h1 class="p-5">My Pets Store</h1>
     <div class="row pt-5">
       <?php foreach ($products as $product) { ?>
         <div class="col-4 pb-5">
@@ -27,12 +28,11 @@ include_once __DIR__ . '/database/db.php'
             <img class="card-img-top" src="<?php echo $product->image ?>" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title"><?php echo $product->name ?></h5>
-              <p class="card-text"><span class="fw-bolder">Tipologia:</span><?php echo $product->food ?></p>
+              <p class="card-text"><span class="fw-bolder">Tipologia:</span><?php echo $product->type ?></p>
               <p class="card-text"><span class="fw-bolder">Prezzo:</span><?php echo $product->price ?></p>
-              <p class="card-text"><span class="fw-bolder">Consumo adibito a:</span><?php echo $product->name ?></p>
               <div class="bottom d-flex justify-content-between">
                 <a href="#" class="btn btn-primary">Leggi la descrizione</a>
-                <i class="fa-solid fa-<?php echo $product->category ?>"></i>
+                <span class="fw-bolder">Ideale per: <i class="fa-solid fa-<?php echo $product->category ?>"></i></span>
 
               </div>
             </div>

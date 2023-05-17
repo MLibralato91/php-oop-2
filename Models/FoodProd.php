@@ -4,10 +4,10 @@ include_once __DIR__ . '/Product.php';
 class FoodProd extends Product
 {
   public
-    $food;
-  public function __construct($name, $price, $image, $category, $food)
+    $type;
+  public function __construct($name, $price, $image, $category, $type)
   {
     parent::__construct($name, $price, $image, $category);
-    $this->food = $food;
+    $this->type = $type;
   }
 }
