@@ -5,9 +5,9 @@ class ToyProd extends Product
 {
   public
     $type;
-  public function __construct($name, $price, $image, $type)
+  public function __construct($name, $price, $image, $category, $type)
   {
-    parent::__construct($name, $price, $image);
+    parent::__construct($name, $price, $image, $category);
     $this->type = $type;
   }
 }

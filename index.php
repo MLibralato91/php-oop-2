@@ -22,16 +22,19 @@ include_once __DIR__ . '/database/db.php'
   <div class="container">
     <div class="row pt-5">
       <?php foreach ($products as $product) { ?>
-        <div class="col-4">
+        <div class="col-4 pb-5">
           <div class="card">
             <img class="card-img-top" src="<?php echo $product->image ?>" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title"><?php echo $product->name ?></h5>
-              <p class="card-text"><span class="fw-bolder">Tipologia:</span><?php echo $product->name ?></p>
-              <p class="card-text"><span class="fw-bolder">Origine:</span><?php echo $product->food ?></p>
-              <p class="card-text"><span class="fw-bolder">Anno di uscita:</span><?php echo $product->name ?></p>
-              <p class="card-text"><span class="fw-bolder">Voto:</span><?php echo $product->price ?></p>
-              <a href="#" class="btn btn-primary">Leggi la descrizione</a>
+              <p class="card-text"><span class="fw-bolder">Tipologia:</span><?php echo $product->food ?></p>
+              <p class="card-text"><span class="fw-bolder">Prezzo:</span><?php echo $product->price ?></p>
+              <p class="card-text"><span class="fw-bolder">Consumo adibito a:</span><?php echo $product->name ?></p>
+              <div class="bottom d-flex justify-content-between">
+                <a href="#" class="btn btn-primary">Leggi la descrizione</a>
+                <i class="fa-solid fa-<?php echo $product->category ?>"></i>
+
+              </div>
             </div>
           </div>
         </div>
